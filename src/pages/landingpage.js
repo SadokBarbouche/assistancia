@@ -11,16 +11,16 @@ const LandingPage = () => {
     <div id="landing" className="py-3" style={{ height: screenHeight }}>
       <Fade right>
         <Image
-          fluid
           src={CVs}
-          className="me-3 img-fluid d-none d-lg-block "
+          className="me-3 img-fluid d-none d-lg-block"
+          fluid
           style={{
             position: "absolute",
+            width: "50%",
             zIndex: "-1",
             top: "0",
             marginTop: "40px",
             right: "0",
-            marginRight: "-1000px",
           }}
         />
       </Fade>
@@ -29,7 +29,7 @@ const LandingPage = () => {
           <div className="text-start">
             <p
               style={{ font: "Gill Sans" }}
-              className="display-1 fw-bolder text-lg-start text-sm-center mt-5"
+              className="display-1 fw-bolder text-lg-start text-sm-center mt-5 text-primary"
             >
               Assistancia
             </p>
@@ -41,15 +41,19 @@ const LandingPage = () => {
               A simple click is what it takes to create whatever document you
               may need to land your dream job.
             </p>
-            <div className="text-lg-start text-sm-center">
+            <div className="text-lg-start text-sm-center" style={{display:"flex",}}>
               <Button
                 className="mt-4"
                 variant="primary"
                 size="lg"
                 style={{ backgroundColor: "#4cbb17" }}
               >
-                Explore
+                Sign in 
+                
               </Button>
+              <p className="text-primary text-decoration-underline ms-2" style={{marginTop:"40px"}}>
+                Discover our solutions
+              </p>
             </div>
           </div>
         </Fade>
