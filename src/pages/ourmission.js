@@ -14,7 +14,7 @@ const OurMission = () => {
       <div>
         <Container>
           <Row className="py-4">
-            <Col className="text-start my-sm-2 my-md-0 " md={4}>
+            <Col className="text-start my-sm-2 my-md-0 " md={3}>
               <div className="text-center py-2" id="item1" style={{}}>
                 <Image
                   fluid
@@ -30,10 +30,10 @@ const OurMission = () => {
                 of.
               </p>
               <div className="text-center">
-                <Button></Button>
+                <Button className="bg-transparent text-dark">Explore</Button>
               </div>
             </Col>
-            <Col
+            <Col md={3}
               className="text-start px-3 py-3 my-sm-2 my-md-0 "
               style={{
                 border: "3px #00B4D8 solid",
