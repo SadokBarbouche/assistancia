@@ -4,8 +4,6 @@ import DownloadCV from "../assets/DownloadYourCv.svg";
 import SelectTheme from "../assets/selectTheme.svg";
 import FillForm from "../assets/fillTheForm.svg";
 import BgBlob from "../assets/blob.svg";
-import "../styles/items.css";
-import { Fade } from "react-reveal";
 
 const OurMission = () => {
   return (
@@ -14,109 +12,54 @@ const OurMission = () => {
         Save time profitably , Spend time productively!
       </h1>
       <div>
-        <Container className="text-center">
-          <Fade down>
-            <Row
-              className="py-4 text-center px-5"
-              style={{
-                display: "flex",
-                justifyContent: "space-around",
-                alignContent: "center",
-              }}
-            >
-              <Col
-                id="selectTheme"
-                className="text-start my-sm-2 my-md-0 py-2"
-                md={3}
-                style={{
-                  backgroundColor: "#CAF0F8",
-                  boxShadow: "0px 0px 3px",
-                  borderRadius: "5px 15px 5px 15px",
-                }}
-              >
-                <div className="text-center py-2" id="item1" style={{}}>
-                  <Image
-                    fluid
-                    src={SelectTheme}
-                    className="px-2 py-2 mb-3"
-                    style={{ width: "55%" }}
-                  />
-                </div>
-                <p className="">
-                  <span className="fw-bolder">Need a document ?</span> Select
-                  one of our well chosen docs templates . The steps are pretty
-                  straightforward and won't take longer than 5 minutes .
-                </p>
-                {/* <div className="text-center">
-                <Button className="bg-transparent text-dark">Explore</Button>
-              </div> */}
-              </Col>
-              <Col
-                id="fillForm"
-                md={3}
-                className="text-start px-3 py-3 my-sm-2 my-md-0"
-                style={{
-                  border: "3px #00B4D8 solid",
-                  backgroundColor: "#00B4D8",
-                  boxShadow: "0px 0px 10px",
-                  borderRadius: "5px 15px 5px 15px",
-                }}
-              >
-                <div className="text-center py-2" id="item1" style={{}}>
-                  <Image
-                    fluid
-                    src={FillForm}
-                    className="px-2 py-2 mb-3"
-                    style={{ width: "75%" }}
-                  />
-                </div>
-                <p>
-                  Fill the form with your infos ,exhibit your skills and talents
-                  and tell recruiters how good you are .
-                </p>
-              </Col>
-              <Col
-                id="downloadCv"
-                className="text-start my-sm-2 my-md-0 py-4"
-                md={3}
-                style={{
-                  backgroundColor: "#CAF0F8",
-                  boxShadow: "0px 0px 3px",
-                  borderRadius: "5px 15px 5px 15px",
-                }}
-              >
+        <Container>
+          <Row className="py-4">
+            <Col className="text-start my-sm-2 my-md-0 " md={4}>
+              <div className="text-center py-2" id="item1" style={{}}>
                 <Image
                   fluid
-                  style={{
-                    width: "45%",
-                    display: "inline",
-                    float: "right",
-                    zIndex: "-1",
-                  }}
-                  src={DownloadCV}
+                  src={SelectTheme}
+                  className="px-2 py-2 mb-3"
+                  style={{ width: "35%" }}
                 />
-
-                <p>
-                  <span className="fw-bolder fs-5">
-                    Bingo ! Here you have it !
-                  </span>{" "}
-                  <br />
-                  <span
-                    className="fw-bolder"
-                    style={{
-                      color: "#03045E",
-                      borderBottom: "2px #03045E solid",
-                    }}
-                  >
-                    Download
-                  </span>{" "}
-                  your documents and land your dream job . In case you're
-                  unfamiliar with design,our platform makes the process of
-                  creating job application documents faster and smoother.{" "}
-                </p>
-              </Col>
-            </Row>
-          </Fade>
+              </div>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of.
+              </p>
+              <div className="text-center">
+                <Button></Button>
+              </div>
+            </Col>
+            <Col
+              className="text-start px-3 py-3 my-sm-2 my-md-0 "
+              style={{
+                border: "3px #00B4D8 solid",
+                borderRadius: "5px 15px 5px 15px",
+                backgroundColor: "#00B4D8",
+              }}
+              md={4}
+            >
+              <div className="text-center py-2" id="item1" style={{}}>
+                <Image
+                  fluid
+                  src={FillForm}
+                  className="px-2 py-2 mb-3"
+                  style={{ width: "40%" }}
+                />
+              </div>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of.
+            </Col>
+            <Col className="text-start my-sm-2 my-md-0 " md={4}>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of.
+            </Col>
+          </Row>
         </Container>
       </div>
     </>
