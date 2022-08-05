@@ -1,0 +1,6 @@
+#downloadCv ,#selectTheme ,#fillForm{
+    transition: transform .2s;
+}
+#downloadCv:hover ,#selectTheme:hover ,#fillForm:hover{
+    transform: scale(1.02);
+}
