@@ -4,3 +4,10 @@
 #downloadCv:hover ,#selectTheme:hover ,#fillForm:hover{
     transform: scale(1.02);
 }
+.founders {
+    transition: transform .2s;
+}
+
+.founders:hover{
+    transform: scale(1.02);
+}
