@@ -15,7 +15,7 @@ const OurMission = () => {
       </h1>
       <div>
         <Container className="text-center">
-          <Fade down>
+          <Fade up>
             <Row
               className="py-4 text-center px-5 gy-3"
               style={{
