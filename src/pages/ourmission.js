@@ -54,7 +54,7 @@ const OurMission = () => {
               <Col
                 id="fillForm"
                 md={3}
-                className="text-start px-3 py-3 my-sm-2 my-md-0 text-light"
+                className="text-start px-3 py-3 my-sm-2 my-md-0"
                 style={{
                   border: "3px #00B4D8 solid",
                   backgroundColor: "#00B4D8",
@@ -71,7 +71,7 @@ const OurMission = () => {
                   />
                 </div>
                 <p>
-                  Fill the form with your infos,exhibit your skills and talents
+                  Fill the form with your infos ,exhibit your skills and talents
                   and tell recruiters how good you are .
                 </p>
               </Col>
