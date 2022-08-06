@@ -152,7 +152,7 @@ const MadeBy = () => {
               </a>
               <a
                 target="blank"
-                href="https://www.facebook.com/sadok.barbouche.942/"
+                href="https://www.facebook.com/motaz.trad.7/"
                 className="text-end text-light mt-2"
                 style={{
                   border: "0px",
@@ -173,7 +173,7 @@ const MadeBy = () => {
                 </svg>
               </a>
               <a
-                href="https://www.linkedin.com/in/barbouche-sadok-03b162210/"
+                href="linkedin.com/in/ben-trad-moataz-a39235194"
                 target="blank"
                 className="text-end text-light mt-2"
                 style={{
