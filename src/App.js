@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import LandingPage from './pages/landingpage';
 import OurMission from './pages/ourmission';
 import WhyUs from './pages/whyus';
+import MadeBy from './pages/madeby';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <LandingPage/>
       <OurMission />
       <WhyUs />
+      <MadeBy />
     </div>
   );
 }

@@ -17,7 +17,7 @@ const OurMission = () => {
         <Container className="text-center">
           <Fade down>
             <Row
-              className="py-4 text-center px-5"
+              className="py-4 text-center px-5 gy-3"
               style={{
                 display: "flex",
                 justifyContent: "space-around",
@@ -26,7 +26,7 @@ const OurMission = () => {
             >
               <Col
                 id="selectTheme"
-                className="text-start my-sm-2 my-md-0 py-2"
+                className="text-start my-sm-5 my-md-0 py-2"
                 md={3}
                 style={{
                   backgroundColor: "#CAF0F8",

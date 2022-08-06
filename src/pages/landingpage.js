@@ -67,7 +67,7 @@ const LandingPage = () => {
                 </div>
               </Fade>
             </Col>
-            <Col className="d-none d-sm-block">
+            <Col className="d-none d-lg-block">
               <Fade up>
                 <Image
                   fluid
