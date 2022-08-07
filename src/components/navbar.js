@@ -1,12 +1,31 @@
-import React, { useState } from "react";
-import { Navbar, Container, NavDropdown, Nav, Button, Image } from "react-bootstrap";
-import {NavLink,Link} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import {
+  Navbar,
+  Container,
+  NavDropdown,
+  Nav,
+  Button,
+  Image,
+} from "react-bootstrap";
+import { NavLink, Link } from "react-router-dom";
 import Logo from "../assets/logo.svg";
 import "../styles/items.css";
 const NavBar = () => {
+  useEffect(() => {
+    const handleScroll = (event) => {
+      (window.scrollY>0 ? document.getElementById("navbar").classList.add("shadow-lg") :document.getElementById("navbar").classList.remove("shadow-lg") );
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <Navbar
+      id="navbar"
       collapseOnSelect
       expand="lg"
       style={{ backgroundColor: "#00B4D8" }}
@@ -19,9 +38,7 @@ const NavBar = () => {
           style={{ fontFamily: "Changa, sans-serif" }}
           href="#home"
         >
-          <span>
-            <Image className="mb-3" style={{}} fluid src={Logo} />
-          </span>
+          <Image className="mb-2" style={{ height: "35px" }} fluid src={Logo} />
           Assistancya
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -38,10 +55,20 @@ const NavBar = () => {
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link className="me-md-2" style={{textDecoration:"none",}}>
+            <Nav.Link className="me-md-2" style={{ textDecoration: "none" }}>
               {" "}
-              <NavLink to="/Login" activeStyle style={{textDecoration:"none"}}>
-               <span className="" style={{color:"rgb(3, 4, 94)",textDecoration:"none"}}> Login </span>
+              <NavLink
+                to="/Login"
+                activeStyle
+                style={{ textDecoration: "none" }}
+              >
+                <span
+                  className=""
+                  style={{ color: "rgb(3, 4, 94)", textDecoration: "none" }}
+                >
+                  {" "}
+                  Login{" "}
+                </span>
               </NavLink>
             </Nav.Link>
 

@@ -65,7 +65,7 @@ const MadeBy = () => {
                     Sadok Barbouche
                   </p>
                   <p className="fw-bolder" style={{ marginTop: "-20px" }}>
-                    Founder
+                    Founder | WebMaster
                   </p>
                 </div>
                 <div style={{ display: "flex", justifyContent: "center" }}>

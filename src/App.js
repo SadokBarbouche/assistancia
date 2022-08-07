@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import Login from './pages/login';
 import NavBar from './components/navbar';
 import WholeLandingPage from './pages/wholeLandingPage';
+import SignUp from './pages/SignUp';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
         <Routes>
           <Route path="/" exact element={<WholeLandingPage />} />
           <Route path="/Login" exact element={<Login />} />
+          <Route path="/SignUp" exact element={<SignUp />} />
+    
         </Routes>
       </Router>
     </div>
