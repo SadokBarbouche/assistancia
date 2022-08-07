@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Col, Container, Image, Row } from "react-bootstrap";
 import avatar from "../assets/avatar.svg";
 import { Fade } from "react-reveal";
-import "../styles/items.css";
+import "../styles/items.css"
 function creatorComponent(props) {
   return;
   <Col
@@ -28,7 +28,7 @@ const MadeBy = () => {
             color: "rgb(3, 4, 94)",
           }}
         >
-          The Team behind Assistancia :
+          The Team behind Assistancya :
         </p>
         <Container
           style={{

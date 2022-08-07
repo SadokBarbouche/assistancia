@@ -6,10 +6,12 @@ import OurMission from './pages/ourmission';
 import WhyUs from './pages/whyus';
 import MadeBy from './pages/madeby';
 import Footer from './components/Footer';
+import NavBar from './components/navbar';
 
 function App() {
   return (
     <div className="App">
+      <NavBar />
       <LandingPage/>
       <OurMission />
       <WhyUs />
