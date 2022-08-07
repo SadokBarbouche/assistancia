@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { Navbar, Container, NavDropdown, Nav, Button } from "react-bootstrap";
+import { Navbar, Container, NavDropdown, Nav, Button, Image } from "react-bootstrap";
+import Logo from "../assets/logo.svg";
+import "../styles/items.css";
 const NavBar = () => {
-  const [shadow, setShadow] = useState("");
-  const handleShadow = () => {
-    setShadow("shadow-lg");
-  };
+
   return (
     <Navbar
       collapseOnSelect
@@ -12,11 +11,16 @@ const NavBar = () => {
       style={{ backgroundColor: "#00B4D8" }}
       variant="transparent"
       sticky="top"
-      className={shadow}
-      onScroll={handleShadow}
-    >
+ >
       <Container className="text-light">
-        <Navbar.Brand className="fs-3  " href="#home">
+        <Navbar.Brand className="fs-3 fw-bolder text-dark" 
+        style={{fontFamily: 'Changa, sans-serif'
+      }} 
+href="#home">
+  <span>
+    <Image  className="mb-3" style={{
+    }} fluid src={Logo} />
+  </span>
           Assistancya
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
