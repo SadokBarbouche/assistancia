@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Navbar, Container, NavDropdown, Nav, Button, Image } from "react-bootstrap";
+import {NavLink,Link} from "react-router-dom";
 import Logo from "../assets/logo.svg";
 import "../styles/items.css";
 const NavBar = () => {
@@ -11,16 +12,16 @@ const NavBar = () => {
       style={{ backgroundColor: "#00B4D8" }}
       variant="transparent"
       sticky="top"
- >
+    >
       <Container className="text-light">
-        <Navbar.Brand className="fs-3 fw-bolder text-dark" 
-        style={{fontFamily: 'Changa, sans-serif'
-      }} 
-href="#home">
-  <span>
-    <Image  className="mb-3" style={{
-    }} fluid src={Logo} />
-  </span>
+        <Navbar.Brand
+          className="fs-3 fw-bolder text-dark"
+          style={{ fontFamily: "Changa, sans-serif" }}
+          href="#home"
+        >
+          <span>
+            <Image className="mb-3" style={{}} fluid src={Logo} />
+          </span>
           Assistancya
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -37,9 +38,13 @@ href="#home">
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link className="me-md-2" href="">
-              Login
+            <Nav.Link className="me-md-2" style={{textDecoration:"none",}}>
+              {" "}
+              <NavLink to="/Login" activeStyle style={{textDecoration:"none"}}>
+               <span className="" style={{color:"rgb(3, 4, 94)",textDecoration:"none"}}> Login </span>
+              </NavLink>
             </Nav.Link>
+
             <Nav.Link eventKey={2} className="" href="">
               <Button
                 className="px-3"
