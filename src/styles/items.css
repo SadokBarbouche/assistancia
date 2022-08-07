@@ -4,3 +4,12 @@
 #downloadCv:hover ,#selectTheme:hover ,#fillForm:hover{
     transform: scale(1.02);
 }
+.founders {
+    transition: transform .2s;
+}
+
+.founders:hover{
+    transform: scale(1.02);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@300&display=swap');
