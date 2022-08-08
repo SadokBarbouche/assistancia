@@ -11,6 +11,7 @@ import Login from "./pages/login";
 import NavBar from "./components/navbar";
 import WholeLandingPage from "./pages/wholeLandingPage";
 import SignUp from "./pages/SignUp";
+import FormToFill from "./pages/FormToFill";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" exact element={<WholeLandingPage />} />
           <Route path="/Login" exact element={<Login />} />
           <Route path="/SignUp" exact element={<SignUp />} />
+          <Route path="/FillForm" exact element ={<FormToFill />} />
         </Routes>
       </Router>
     </div>

@@ -14,7 +14,7 @@ const SignUp = () => {
             <Row>
               <p
                 style={{ color: "rgb(3, 4, 94)" }}
-                className="display-2 text-start fw-bolder"
+                className="display-2 mt-4 text-start fw-bolder"
               >
                 If opportunity doesn't knock,{" "}
                 <span
