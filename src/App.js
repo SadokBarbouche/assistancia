@@ -1,16 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LandingPage from './pages/landingpage';
-import OurMission from './pages/ourmission';
-import WhyUs from './pages/whyus';
-import MadeBy from './pages/madeby';
-import Footer from './components/Footer';
-import Login from './pages/login';
-import NavBar from './components/navbar';
-import WholeLandingPage from './pages/wholeLandingPage';
-import SignUp from './pages/SignUp';
+import logo from "./logo.svg";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LandingPage from "./pages/landingpage";
+import OurMission from "./pages/ourmission";
+import WhyUs from "./pages/whyus";
+import MadeBy from "./pages/madeby";
+import Footer from "./components/Footer";
+import Login from "./pages/login";
+import NavBar from "./components/navbar";
+import WholeLandingPage from "./pages/wholeLandingPage";
+import SignUp from "./pages/SignUp";
 
 function App() {
   return (
@@ -20,7 +20,6 @@ function App() {
           <Route path="/" exact element={<WholeLandingPage />} />
           <Route path="/Login" exact element={<Login />} />
           <Route path="/SignUp" exact element={<SignUp />} />
-    
         </Routes>
       </Router>
     </div>

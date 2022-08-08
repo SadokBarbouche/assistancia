@@ -65,15 +65,13 @@ const Login = () => {
                 </Button>
                 <NavLink to="/SignUp" activeStyle>
                   <p
-                    className=" text-decoration-underline mt-4"
+                    className=" text-decoration-underline fw-bold"
                     style={{
-                      
                       display: "inline",
-                      marginLeft: "-5px",
                       color: "#00B4D8",
                     }}
                   >
-                    Don't have an account ? Come on in !
+                    Don't have an account ? Sign up !
                   </p>
                 </NavLink>
               </Form>
@@ -84,7 +82,7 @@ const Login = () => {
             className="d-none d-xl-block"
           >
             <Fade right>
-              <Image src={LoginImage} style={{marginTop:"15px"}} fluid />
+              <Image src={LoginImage} style={{ marginTop: "15px" }} fluid />
             </Fade>
           </Col>
         </Row>
