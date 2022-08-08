@@ -26,16 +26,21 @@ const SignUp = () => {
                 className="mb-3"
                 controlId="exampleForm.ControlInput1"
               >
-                <Form.Label>Email address:</Form.Label>
-                <Form.Control type="email" placeholder="name@example.com" />
+                <Form.Label className="fs-5">Email address:</Form.Label>
+                <Form.Control
+                  type="email"
+                  style={{ border: "2px #03045E solid" }}
+                  placeholder="name@example.com"
+                />
               </Form.Group>
 
               <Form.Group
                 className="mb-3"
                 controlId="exampleForm.ControlInput1"
               >
-                <Form.Label>Password:</Form.Label>
+                <Form.Label className="fs-5">Password:</Form.Label>
                 <Form.Control
+                  style={{ border: "2px #03045E solid" }}
                   type="password"
                   placeholder="Type your password"
                 />
@@ -45,8 +50,9 @@ const SignUp = () => {
                 className="mb-3"
                 controlId="exampleForm.ControlInput1"
               >
-                <Form.Label>Confirm your password:</Form.Label>
+                <Form.Label className="fs-5">Confirm your password:</Form.Label>
                 <Form.Control
+                  style={{ border: "2px #03045E solid" }}
                   type="password"
                   placeholder="Retype your password"
                 />
@@ -56,16 +62,24 @@ const SignUp = () => {
                 className="mb-3"
                 controlId="exampleForm.ControlInput1"
               >
-                <Form.Label>Birthday:</Form.Label>
-                <Form.Control type="date" placeholder="" />
+                <Form.Label className="fs-5">Birthday:</Form.Label>
+                <Form.Control
+                  type="date"
+                  style={{ border: "2px #03045E solid" }}
+                  placeholder=""
+                />
               </Form.Group>
 
               <Form.Group
                 className="mb-3"
                 controlId="exampleForm.ControlInput1"
               >
-                <Form.Label>Upload your profile picture:</Form.Label>
-                <Form.Control type="file" placeholder="" />
+                <Form.Label className="fs-5">Upload your profile picture:</Form.Label>
+                <Form.Control
+                  style={{ border: "2px #03045E solid" }}
+                  type="file"
+                  placeholder=""
+                />
               </Form.Group>
               <div
                 className="mt-4"
@@ -85,18 +99,18 @@ const SignUp = () => {
             </Form>
           </Col>
           <Col className="d-none d-lg-block">
-              <Image
-                fluid
-                style={{
-                  transform: "scaleX(-1)",
-                  zIndex: "-1",
-                  marginLeft: "-500px",
-                  position: "absolute",
-                  marginTop: "-40px",
-                  height:"70%"
-                }}
-                src={SignUpPic}
-              />
+            <Image
+              fluid
+              style={{
+                transform: "scaleX(-1)",
+                zIndex: "-1",
+                marginLeft: "-500px",
+                position: "absolute",
+                marginTop: "-40px",
+                height: "70%",
+              }}
+              src={SignUpPic}
+            />
           </Col>
         </Row>
       </Container>
