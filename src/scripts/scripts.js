@@ -2,7 +2,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 
 function addEducationContent (){
-
        return(
               document.getElementById("toadd").innerHTML += `
               <div class="form-group mb-3 border border-dark rounded" style="display='flex';">
@@ -49,4 +48,7 @@ function addEducationContent (){
 export function addEducationElement() {
          document.getElementById("addEducation").addEventListener("click",addEducationContent())
          document.getElementById("addEducation").removeEventListener("click",addEducationContent())
+}
+export function deleteEducation(e){
+       document.getElementById("toadd").lastChild.remove();
 }

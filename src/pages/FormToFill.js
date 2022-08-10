@@ -11,15 +11,17 @@ import {
   Row,
   Table,
 } from "react-bootstrap";
-import { addEducationElement } from "../scripts/scripts.js";
+import { addEducationElement, deleteEducation } from "../scripts/scripts.js";
 import { Fade } from "react-reveal";
+import { useAccordionButton } from 'react-bootstrap/AccordionButton';
+
 import FormPic from "../assets/Form.svg";
 import { Helmet } from "react-helmet";
 
 const AccordionElement = (props) => {
   return (
     <Accordion className="mt-3">
-      <Accordion.Item eventKey="0">
+      <Accordion.Item eventKey="1">
         <Accordion.Header className="">
           <h4 className="fs-5 fw-bold ">{props.Headline}</h4>
         </Accordion.Header>
@@ -38,13 +40,17 @@ const AccordionElement = (props) => {
 };
 
 const FormToFill = () => {
+  const [isCollapsed,setIsCollapsed] = useState("0");
+  const handleIsCollapsed = () => isCollapsed == "0" ? setIsCollapsed("1") : setIsCollapsed("0");
+
   const EducationAccordionElement = (props) => {
     return (
       <Accordion
+      defaultActiveKey={isCollapsed}
         className="mt-3"
         style={{ border: "1px black solid", borderRadius: "5px" }}
       >
-        <Accordion.Item eventKey="0">
+        <Accordion.Item eventKey="1">
           <Accordion.Header className="">
             <h4 className="fs-5 fw-bold ">{props.Headline}</h4>
           </Accordion.Header>
@@ -114,7 +120,7 @@ const FormToFill = () => {
             <div style={{}}>
               <Button
                 id="addEducation"
-                onClick={addEducationElement}
+                onClick={()=>addEducationElement()}
                 className="px-3 fs-6 "
                 style={{}}
               >
@@ -135,7 +141,7 @@ const FormToFill = () => {
                 </span>
               </Button>
 
-              <Button style={{ float: "right" }}>
+              <Button onClick={()=>handleIsCollapsed()} style={{ float: "right" }}>
                 <span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -152,6 +158,7 @@ const FormToFill = () => {
                 Finished
               </Button>
               <Button
+                onClick={() => deleteEducation()}
                 id="deleteEducation"
                 variant="transparent"
                 className="bg-transparent me-3"
@@ -279,15 +286,13 @@ const FormToFill = () => {
             </Form>
           </Col>
         </Row>
-        <Container>
+        <div>
           <EducationAccordionElement Headline="Education " />
           <AccordionElement Headline="lorem" />
           <AccordionElement Headline="lorem" />
-        </Container>
+        </div>
       </Container>
-      <Helmet>
-        <script src="../scripts/scripts.js"></script>
-      </Helmet>
+
     </div>
   );
 };
