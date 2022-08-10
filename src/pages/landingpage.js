@@ -1,9 +1,11 @@
 import React from "react";
 import "../styles/landing.css";
 import { Button, Col, Collapse, Container, Image, Row } from "react-bootstrap";
+import { Link } from "react-scroll";
 import CVs from "../assets/CVs.png";
 import CV from "../assets/cvs.svg";
 import { Fade } from "react-reveal";
+import WhyUs from "./whyus";
 const LandingPage = () => {
   const screenHeight = window.screen.availHeight + "px";
   const screenWidth = window.screen.availWidth + "px";
@@ -53,7 +55,7 @@ const LandingPage = () => {
                     style={{ float: "left", backgroundColor: "#03045E" }}
                     className="rounded-pill px-4"
                   >
-                    Explore
+                    <Link activeClass="acitve" smooth={true} spy={true} >Explore</Link>
                   </Button>
 
                   <Button
