@@ -11,7 +11,7 @@ import {
   Row,
   Table,
 } from "react-bootstrap";
-import {addEducationElement} from "../scripts/scripts.js";
+import { addEducationElement } from "../scripts/scripts.js";
 import { Fade } from "react-reveal";
 import FormPic from "../assets/Form.svg";
 import { Helmet } from "react-helmet";
@@ -114,9 +114,7 @@ const FormToFill = () => {
             <div style={{}}>
               <Button
                 id="addEducation"
-                onClick={()=>{
-                  addEducationElement()
-                }}
+                onClick={addEducationElement}
                 className="px-3 fs-6 "
                 style={{}}
               >
