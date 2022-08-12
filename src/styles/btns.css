@@ -1,0 +1,22 @@
+#previewBtn {
+  background-color: #00b4d8;
+}
+#downloadBtn {
+  background-color: #03045e;
+}
+#previewBtn,
+#downloadBtn {
+  transition-duration: 0.3s;
+}
+#previewBtn:hover {
+  transform: scale(1.02);
+  color: #000;
+
+  background-color: #e8ffff;
+}
+#downloadBtn:hover {
+  transform: scale(1.02);
+  color: #000;
+
+  background-color: #e8ffff;
+}

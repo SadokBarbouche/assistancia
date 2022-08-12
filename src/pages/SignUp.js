@@ -6,9 +6,12 @@ import { Fade } from "react-reveal";
 const SignUp = () => {
   return (
     <Fade>
-      <div style={{
-        backgroundColor:"#90E0EF",minHeight:"100vh",
-}}>
+      <div
+        style={{
+          backgroundColor: "#90E0EF",
+          minHeight: "100vh",
+        }}
+      >
         <div style={{}}>
           <Container style={{}}>
             <Row>
@@ -36,7 +39,33 @@ const SignUp = () => {
                     <Form.Label className="fs-5">Email address:</Form.Label>
                     <Form.Control type="email" placeholder="name@example.com" />
                   </Form.Group>
-
+                  <div>
+                    <Row>
+                      <Col>
+                        <Form.Group
+                          className="mb-3"
+                          controlId="exampleForm.ControlInput1"
+                        >
+                          <Form.Label className="fs-5">
+                            Firstname:
+                          </Form.Label>
+                          <Form.Control
+                            type="email"
+                            placeholder=""
+                          />
+                        </Form.Group>
+                      </Col>
+                      <Col>
+                      <Form.Group
+                    className="mb-3"
+                    controlId="exampleForm.ControlInput1"
+                  >
+                    <Form.Label className="fs-5">Lastname:</Form.Label>
+                    <Form.Control type="email" placeholder="" />
+                  </Form.Group>
+                  </Col>
+                    </Row>
+                  </div>
                   <Form.Group
                     className="mb-3"
                     controlId="exampleForm.ControlInput1"
@@ -67,16 +96,6 @@ const SignUp = () => {
                   >
                     <Form.Label className="fs-5">Birthday:</Form.Label>
                     <Form.Control type="date" placeholder="" />
-                  </Form.Group>
-
-                  <Form.Group
-                    className="mb-3"
-                    controlId="exampleForm.ControlInput1"
-                  >
-                    <Form.Label className="fs-5">
-                      Upload your profile picture:
-                    </Form.Label>
-                    <Form.Control type="file" placeholder="" />
                   </Form.Group>
                   <div
                     className="mt-4"
