@@ -6,6 +6,7 @@ import {
   Button,
   Col,
   Container,
+  Dropdown,
   Form,
   Image,
   Row,
@@ -35,6 +36,7 @@ import {
 import { useAccordionButton } from "react-bootstrap/AccordionButton";
 import { addEmploymentElement, deleteEmployment } from "../scripts/scripts.js";
 import FormPic from "../assets/Form.svg";
+import { Fade } from "react-reveal";
 
 const AccordionElement = (props) => {
   return (
@@ -58,7 +60,6 @@ const AccordionElement = (props) => {
 };
 
 const FormToFill = () => {
-  
   const EmploymentElement = (props) => {
     return (
       <Accordion
@@ -1226,141 +1227,153 @@ const FormToFill = () => {
       }}
     >
       <Container
-        className="py-5"
+        className="py-3"
         style={{
           minHeight: "100vh",
         }}
       >
         <Row style={{}}>
-          <Col className="d-none d-lg-block">
-            <Image src={FormPic} fluid style={{ height: "100%" }} />
+          <Col className="d-none d-lg-block" style={{ height: "100%" }}>
+            <Fade left>
+              <Image
+                src={FormPic}
+                className="mt-5 pt-5"
+                style={{ width: "120%", height: "100%" }}
+              />
+            </Fade>
           </Col>
-
           <Col className="text-start">
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label className="fw-bolder fs-3">
-                Professional Picture
-              </Form.Label>
-              <Form.Control type="file" />
-            </Form.Group>
+            <Fade>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label className="fw-bolder fs-3">
+                  Professional Picture
+                </Form.Label>
+                <Form.Control type="file" />
+              </Form.Group>
 
-            <Form className="text-start">
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                }}
-              >
+              <Form className="text-start">
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label className="fw-bolder">Firstname</Form.Label>
+                    <Form.Control
+                      className="infos"
+                      type="text"
+                      placeholder="Firstname"
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-3 ms-2" controlId="formBasicEmail">
+                    <Form.Label className="fw-bolder">Lastname</Form.Label>
+                    <Form.Control
+                      type="email"
+                      className="infos"
+                      placeholder="Lastname"
+                    />
+                  </Form.Group>
+                </div>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Label className="fw-bolder">Firstname</Form.Label>
-                  <Form.Control
-                    className="infos"
-                    type="text"
-                    placeholder="Firstname"
-                  />
-                </Form.Group>
-                <Form.Group className="mb-3 ms-2" controlId="formBasicEmail">
-                  <Form.Label className="fw-bolder">Lastname</Form.Label>
+                  <Form.Label className="fw-bolder">Email address</Form.Label>
                   <Form.Control
                     type="email"
                     className="infos"
-                    placeholder="Lastname"
+                    placeholder="Email address"
                   />
                 </Form.Group>
-              </div>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label className="fw-bolder">Email address</Form.Label>
-                <Form.Control
-                  type="email"
-                  className="infos"
-                  placeholder="Email address"
-                />
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label className="fw-bolder">LinkedIn Profile</Form.Label>
-                <Form.Control
-                  type="email"
-                  className="infos"
-                  placeholder="Paste your LinkedIn's URL"
-                />
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label className="fw-bolder">Website</Form.Label>
-                <Form.Control
-                  type="text"
-                  className="infos"
-                  placeholder="Paste your Website"
-                />
-              </Form.Group>
-
-              <div
-                className=""
-                style={{ display: "flex", justifyContent: "space-between" }}
-              >
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label className="fw-bolder">
-                    Seeked Job(Headline)
+                    LinkedIn Profile
                   </Form.Label>
-                  <Form.Control
-                    type="text"
-                    className="infos"
-                    placeholder="Headline"
-                  />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Label className="fw-bolder">Phone number</Form.Label>
-
                   <Form.Control
                     type="email"
                     className="infos"
-                    placeholder="ie : +216 99 999 999"
+                    placeholder="Paste your LinkedIn's URL"
                   />
                 </Form.Group>
-              </div>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label className="fw-bolder">Brief description</Form.Label>
-                <Form.Control
-                  rows={3}
-                  as="textarea"
-                  className="infos"
-                  type="email"
-                  placeholder="A brief description about you"
-                />
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label className="fw-bolder">Address</Form.Label>
-                <Form.Control
-                  type="email"
-                  placeholder="Address"
-                  className="infos"
-                />
-              </Form.Group>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                }}
-              >
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Label className="fw-bolder">City</Form.Label>
+                  <Form.Label className="fw-bolder">Website</Form.Label>
                   <Form.Control
                     type="text"
                     className="infos"
-                    placeholder="City"
+                    placeholder="Paste your Website"
+                  />
+                </Form.Group>
+
+                <div
+                  className=""
+                  style={{ display: "flex", justifyContent: "space-between" }}
+                >
+                  <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label className="fw-bolder">
+                      Seeked Job(Headline)
+                    </Form.Label>
+                    <Form.Control
+                      type="text"
+                      className="infos"
+                      placeholder="Headline"
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label className="fw-bolder">Phone number</Form.Label>
+
+                    <Form.Control
+                      type="email"
+                      className="infos"
+                      placeholder="ie : +216 99 999 999"
+                    />
+                  </Form.Group>
+                </div>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Label className="fw-bolder">
+                    Brief description
+                  </Form.Label>
+                  <Form.Control
+                    rows={3}
+                    as="textarea"
+                    className="infos"
+                    type="email"
+                    placeholder="A brief description about you"
                   />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Label className="fw-bolder">Post code</Form.Label>
+                  <Form.Label className="fw-bolder">Address</Form.Label>
                   <Form.Control
-                    type="number"
+                    type="email"
+                    placeholder="Address"
                     className="infos"
-                    placeholder="Post code (ie : 7100)"
                   />
                 </Form.Group>
-              </div>
-            </Form>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label className="fw-bolder">City</Form.Label>
+                    <Form.Control
+                      type="text"
+                      className="infos"
+                      placeholder="City"
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label className="fw-bolder">Post code</Form.Label>
+                    <Form.Control
+                      type="number"
+                      className="infos"
+                      placeholder="Post code (ie : 7100)"
+                    />
+                  </Form.Group>
+                </div>
+              </Form>
+            </Fade>
           </Col>
         </Row>
+        <Fade left>
         <div>
           <EducationAccordionElement Headline="Education " />
           <EmploymentAccordionElement Headline="Employment" />
@@ -1389,6 +1402,85 @@ const FormToFill = () => {
             </Col>
           </Row>
         </div>
+        </Fade>
+      </Container>
+      <Container className="mb-3">
+        <Dropdown>
+          <Dropdown.Toggle
+            variant="success"
+            className="fs-5"
+            style={{ backgroundColor: "#CAF0F8",color:"#03045E" }}
+            id="dropdown-basic"
+          >
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                class="bi bi-file-earmark-person"
+                viewBox="0 0 16 16"
+              >
+                <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2v9.255S12 12 8 12s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h5.5v2z" />
+              </svg>
+            </span>
+            &nbsp;Select your CV Model
+          </Dropdown.Toggle>
+
+          <Dropdown.Menu>
+            <Dropdown.Item
+              style={{ height: "75px" }}
+              className="fw-bold"
+              href=""
+            >
+              <span>
+                <Image src={FormPic} height={75} width={75} fluid />
+              </span>
+              Professional
+            </Dropdown.Item>
+            <Dropdown.Item
+              style={{ height: "75px" }}
+              className="fw-bold"
+              href=""
+            >
+              <span>
+                <Image src={FormPic} height={75} width={75} fluid />
+              </span>
+              Simple
+            </Dropdown.Item>
+            <Dropdown.Item
+              style={{ height: "75px" }}
+              className="fw-bold"
+              href=""
+            >
+              <span>
+                <Image src={FormPic} height={75} width={75} fluid />
+              </span>
+              Classic
+            </Dropdown.Item>
+            <Dropdown.Item
+              style={{ height: "75px" }}
+              className="fw-bold"
+              href=""
+            >
+              <span>
+                <Image src={FormPic} height={75} width={75} fluid />
+              </span>
+              Creative
+            </Dropdown.Item>
+            <Dropdown.Item
+              style={{ height: "75px" }}
+              className="fw-bold"
+              href=""
+            >
+              <span>
+                <Image src={FormPic} height={75} width={75} fluid />
+              </span>
+              Canadian
+            </Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
       </Container>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <Button id="downloadBtn" className="mb-3 me-2">

@@ -88,10 +88,10 @@ const Login = () => {
             </Col>
             <Col
               style={{ backgroundColor: "#90E0EF", zIndex: "" }}
-              className="d-none d-xl-block"
+              className="d-none d-xl-block pt-5 mt-5"
             >
               <Fade right>
-                <Image src={LoginImage} style={{ marginTop: "15px" }} fluid />
+                <Image src={LoginImage} style={{ }} fluid />
               </Fade>
             </Col>
           </Row>
