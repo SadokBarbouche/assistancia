@@ -24,7 +24,6 @@ import {
   deleteHobby,
   deleteLanguage,
   deleteQuality,
-  formObject,
 } from "../scripts/scripts.js";
 import {
   addEducationElement,
@@ -35,7 +34,7 @@ import {
 } from "../scripts/scripts.js";
 import { useAccordionButton } from "react-bootstrap/AccordionButton";
 import { addEmploymentElement, deleteEmployment } from "../scripts/scripts.js";
-import FormPic from "../assets/Form.svg";
+import FormPic from "../assets/FormPic.svg";
 import { Fade } from "react-reveal";
 
 const AccordionElement = (props) => {
@@ -1220,12 +1219,24 @@ const FormToFill = () => {
       </Accordion>
     );
   };
+
   return (
     <div
       style={{
         backgroundColor: "#90E0EF",
       }}
     >
+      <div style={{ width: "100%", position: "absolute", top: "0" }}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            width={100}
+            fill="#00B4D8"
+            fill-opacity="1"
+            d="M0,96L48,133.3C96,171,192,245,288,256C384,267,480,213,576,170.7C672,128,768,96,864,101.3C960,107,1056,149,1152,154.7C1248,160,1344,128,1392,112L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+          ></path>
+        </svg>
+      </div>
+
       <Container
         className="py-3"
         style={{
@@ -1238,7 +1249,8 @@ const FormToFill = () => {
               <Image
                 src={FormPic}
                 className="mt-5 pt-5"
-                style={{ width: "120%", height: "100%" }}
+                fluid
+                style={{ transform: "scaleX(1)", marginLeft: "-75px" }}
               />
             </Fade>
           </Col>
@@ -1261,7 +1273,7 @@ const FormToFill = () => {
                   <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label className="fw-bolder">Firstname</Form.Label>
                     <Form.Control
-                      className="infos"
+                      className="fn"
                       type="text"
                       placeholder="Firstname"
                     />
@@ -1270,7 +1282,7 @@ const FormToFill = () => {
                     <Form.Label className="fw-bolder">Lastname</Form.Label>
                     <Form.Control
                       type="email"
-                      className="infos"
+                      className="ln"
                       placeholder="Lastname"
                     />
                   </Form.Group>
@@ -1406,7 +1418,7 @@ const FormToFill = () => {
       </Container>
       <Container className="mb-3">
         <Dropdown>
-          <Dropdown.Toggle id="cvModelSelect" className="fs-5"  >
+          <Dropdown.Toggle id="cvModelSelect" className="fs-5">
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -1477,7 +1489,13 @@ const FormToFill = () => {
           </Dropdown.Menu>
         </Dropdown>
       </Container>
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginBottom: "-250px",
+        }}
+      >
         <Button id="downloadBtn" className="mb-3 me-2">
           <span>
             <svg
