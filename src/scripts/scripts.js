@@ -332,3 +332,4 @@ export function addHobbyElement() {
     .getElementById("addHobby")
     .removeEventListener("click", addHobbiesContent());
 }
+

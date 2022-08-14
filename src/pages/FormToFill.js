@@ -1219,6 +1219,12 @@ const FormToFill = () => {
       </Accordion>
     );
   };
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [email, setEmail] = useState("");
+  // console.log(firstname);
+  // console.log(lastname);
+  
 
   return (
     <div
@@ -1236,7 +1242,6 @@ const FormToFill = () => {
           ></path>
         </svg>
       </div>
-
       <Container
         className="py-3"
         style={{
@@ -1262,7 +1267,6 @@ const FormToFill = () => {
                 </Form.Label>
                 <Form.Control type="file" />
               </Form.Group>
-
               <Form className="text-start">
                 <div
                   style={{
@@ -1275,6 +1279,10 @@ const FormToFill = () => {
                     <Form.Control
                       className="fn"
                       type="text"
+                      onChange={(e) => {
+                        setFirstname(e.target.value);                        
+                      }}
+                      value={firstname}
                       placeholder="Firstname"
                     />
                   </Form.Group>
@@ -1282,7 +1290,12 @@ const FormToFill = () => {
                     <Form.Label className="fw-bolder">Lastname</Form.Label>
                     <Form.Control
                       type="email"
+                      value={lastname}
                       className="ln"
+                      onChange={(e) => {
+                        setLastname(e.target.value);
+                        console.log(lastname);
+                      }}
                       placeholder="Lastname"
                     />
                   </Form.Group>
