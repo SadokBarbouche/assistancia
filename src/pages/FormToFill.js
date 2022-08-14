@@ -1374,44 +1374,39 @@ const FormToFill = () => {
           </Col>
         </Row>
         <Fade left>
-        <div>
-          <EducationAccordionElement Headline="Education " />
-          <EmploymentAccordionElement Headline="Employment" />
+          <div>
+            <EducationAccordionElement Headline="Education " />
+            <EmploymentAccordionElement Headline="Employment" />
+            <div>
+              <Row>
+                <Col md={6} sm={7}>
+                  <CertificateAccordionElement Headline="Certificates" />
+                </Col>
+                <Col md={6} sm={7}>
+                  <SkillsAccordionElement Headline="Skills" />
+                </Col>
+              </Row>
+            </div>
+          </div>
+          <AchievementsExtraActivitiesAccordionElment Headline="Extracurricular activities" />
           <div>
             <Row>
-              <Col md={6} sm={7}>
-                <CertificateAccordionElement Headline="Certificates" />
+              <Col>
+                <LanguagesAccordionElement Headline="Languages" />
               </Col>
-              <Col md={6} sm={7}>
-                <SkillsAccordionElement Headline="Skills" />
+              <Col>
+                <QualitiesAccordionElement Headline="Qualities" />
+              </Col>
+              <Col>
+                <HobbiesAccordionElement Headline="Hobbies" />
               </Col>
             </Row>
           </div>
-        </div>
-        <AchievementsExtraActivitiesAccordionElment Headline="Extracurricular activities" />
-        <div>
-          <Row>
-            <Col>
-              <LanguagesAccordionElement Headline="Languages" />
-            </Col>
-            <Col>
-              <QualitiesAccordionElement Headline="Qualities" />
-            </Col>
-            <Col>
-              <HobbiesAccordionElement Headline="Hobbies" />
-            </Col>
-          </Row>
-        </div>
         </Fade>
       </Container>
       <Container className="mb-3">
         <Dropdown>
-          <Dropdown.Toggle
-            variant="success"
-            className="fs-5"
-            style={{ backgroundColor: "#CAF0F8",color:"#03045E" }}
-            id="dropdown-basic"
-          >
+          <Dropdown.Toggle id="cvModelSelect" className="fs-5"  >
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

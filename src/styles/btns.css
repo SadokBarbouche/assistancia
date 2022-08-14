@@ -20,3 +20,16 @@
 
   background-color: #e8ffff;
 }
+
+
+#cvModelSelect{
+  background-color: #393E6F;
+  transition-duration: 0.3s;
+  color:#fff;
+}
+
+#cvModelSelect:hover{
+  background-color: #90E0EF ;
+  color:#000;
+}
+
