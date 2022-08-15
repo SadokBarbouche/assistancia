@@ -157,7 +157,7 @@ const FormToFill = () => {
                 </span>
               </Button>
 
-              <Button style={{ float: "right" }}>
+              <Button style={{ float: "right" }} >
                 <span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -873,6 +873,7 @@ const FormToFill = () => {
     );
   };
   const EducationAccordionElement = (props) => {
+    
     return (
       <Accordion
         defaultActiveKey="0"
@@ -1222,9 +1223,27 @@ const FormToFill = () => {
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
-  // console.log(firstname);
-  // console.log(lastname);
-  
+  const [linkedin, setLinkedin] = useState("");
+  const [website, setWebsite] = useState("");
+  const [headline, setHeadline] = useState("");
+  const [phone, setPhone] = useState("");
+  const [description, setDescription] = useState("");
+  const [address, setAddress] = useState("");
+  const [city, setCity] = useState("");
+  const [postCode, setPostCode] = useState("");
+  /*Education array*/
+  // const [educationArray, setEducationArray] = useState([]);
+  // const HandleAddEducation = () => {
+  //   setEducationArray((newEducation) => [...educationArray, newEducation]);
+  // };
+
+  // const [educations, setEducations] = useState(null);
+  // const [educationTitle, setEducationTitle] = useState("");
+  // const [school, setSchool] = useState("");
+  // const [educationCity, setEducationCity] = useState("");
+  // const [startDate, setStartDate] = useState("");
+  // const [endDate, setEndDate] = useState("");
+  // const [educationDescription, setEducationDescription] = useState("");
 
   return (
     <div
@@ -1280,7 +1299,7 @@ const FormToFill = () => {
                       className="fn"
                       type="text"
                       onChange={(e) => {
-                        setFirstname(e.target.value);                        
+                        setFirstname(e.target.value);
                       }}
                       value={firstname}
                       placeholder="Firstname"
@@ -1289,12 +1308,11 @@ const FormToFill = () => {
                   <Form.Group className="mb-3 ms-2" controlId="formBasicEmail">
                     <Form.Label className="fw-bolder">Lastname</Form.Label>
                     <Form.Control
-                      type="email"
+                      type="text"
                       value={lastname}
                       className="ln"
                       onChange={(e) => {
                         setLastname(e.target.value);
-                        console.log(lastname);
                       }}
                       placeholder="Lastname"
                     />
@@ -1303,7 +1321,11 @@ const FormToFill = () => {
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label className="fw-bolder">Email address</Form.Label>
                   <Form.Control
+                    value={email}
                     type="email"
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                    }}
                     className="infos"
                     placeholder="Email address"
                   />
@@ -1313,8 +1335,12 @@ const FormToFill = () => {
                     LinkedIn Profile
                   </Form.Label>
                   <Form.Control
-                    type="email"
+                    type="text"
                     className="infos"
+                    value={linkedin}
+                    onChange={(e) => {
+                      setLinkedin(e.target.value);
+                    }}
                     placeholder="Paste your LinkedIn's URL"
                   />
                 </Form.Group>
@@ -1322,6 +1348,10 @@ const FormToFill = () => {
                   <Form.Label className="fw-bolder">Website</Form.Label>
                   <Form.Control
                     type="text"
+                    value={website}
+                    onChange={(e) => {
+                      setWebsite(e.target.value);
+                    }}
                     className="infos"
                     placeholder="Paste your Website"
                   />
@@ -1336,6 +1366,10 @@ const FormToFill = () => {
                       Seeked Job(Headline)
                     </Form.Label>
                     <Form.Control
+                      value={headline}
+                      onChange={(e) => {
+                        setHeadline(e.target.value);
+                      }}
                       type="text"
                       className="infos"
                       placeholder="Headline"
@@ -1345,7 +1379,11 @@ const FormToFill = () => {
                     <Form.Label className="fw-bolder">Phone number</Form.Label>
 
                     <Form.Control
-                      type="email"
+                      value={phone}
+                      onChange={(e) => {
+                        setPhone(e.target.value);
+                      }}
+                      type="text"
                       className="infos"
                       placeholder="ie : +216 99 999 999"
                     />
@@ -1358,6 +1396,10 @@ const FormToFill = () => {
                   <Form.Control
                     rows={3}
                     as="textarea"
+                    value={description}
+                    onChange={(e) => {
+                      setDescription(e.target.value);
+                    }}
                     className="infos"
                     type="email"
                     placeholder="A brief description about you"
@@ -1366,7 +1408,11 @@ const FormToFill = () => {
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label className="fw-bolder">Address</Form.Label>
                   <Form.Control
-                    type="email"
+                    type="text"
+                    value={address}
+                    onChange={(e) => {
+                      setAddress(e.target.value);
+                    }}
                     placeholder="Address"
                     className="infos"
                   />
@@ -1381,6 +1427,10 @@ const FormToFill = () => {
                     <Form.Label className="fw-bolder">City</Form.Label>
                     <Form.Control
                       type="text"
+                      value={city}
+                      onChange={(e) => {
+                        setCity(e.target.value);
+                      }}
                       className="infos"
                       placeholder="City"
                     />
@@ -1389,6 +1439,10 @@ const FormToFill = () => {
                     <Form.Label className="fw-bolder">Post code</Form.Label>
                     <Form.Control
                       type="number"
+                      value={postCode}
+                      onChange={(e) => {
+                        setPostCode(e.target.value);
+                      }}
                       className="infos"
                       placeholder="Post code (ie : 7100)"
                     />
