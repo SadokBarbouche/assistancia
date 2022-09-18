@@ -1,15 +1,22 @@
-#downloadCv ,#selectTheme ,#fillForm{
-    transition: transform .2s;
+#downloadCv,
+#selectTheme,
+#fillForm {
+  transition: transform 0.2s;
 }
-#downloadCv:hover ,#selectTheme:hover ,#fillForm:hover{
-    transform: scale(1.02);
+#downloadCv:hover,
+#selectTheme:hover,
+#fillForm:hover {
+  transform: scale(1.02);
 }
 .founders {
-    transition: transform .2s;
+  transition: transform 0.2s;
 }
 
-.founders:hover{
-    transform: scale(1.02);
+.founders:hover {
+  transform: scale(1.02);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Changa:wght@300&display=swap');
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Changa:wght@300&display=swap");

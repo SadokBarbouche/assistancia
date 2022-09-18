@@ -25,6 +25,7 @@ import {
   deleteLanguage,
   deleteQuality,
 } from "../scripts/scripts.js";
+
 import {
   addEducationElement,
   deleteEducation,
@@ -32,31 +33,16 @@ import {
   addSkillElement,
   deleteSkill,
 } from "../scripts/scripts.js";
+
+import {
+  getEducationArray,
+  schoolTitles,
+} from "../scripts/dataCollectionScript";
+
 import { useAccordionButton } from "react-bootstrap/AccordionButton";
 import { addEmploymentElement, deleteEmployment } from "../scripts/scripts.js";
 import FormPic from "../assets/FormPic.svg";
 import { Fade } from "react-reveal";
-
-const AccordionElement = (props) => {
-  return (
-    <Accordion className="mt-3">
-      <Accordion.Item eventKey="1">
-        <Accordion.Header className="">
-          <h4 className="fs-5 fw-bold ">{props.Headline}</h4>
-        </Accordion.Header>
-        <Accordion.Body className="text-start" id="">
-          <Form.Group
-            className="mb-3 w-100"
-            controlId="formBasicEmail"
-            style={{ display: "flex" }}
-          >
-            <Form.Control type="email" placeholder={props.description} />
-          </Form.Group>
-        </Accordion.Body>
-      </Accordion.Item>
-    </Accordion>
-  );
-};
 
 const FormToFill = () => {
   const EmploymentElement = (props) => {
@@ -76,7 +62,6 @@ const FormToFill = () => {
               controlId="formBasicEmail"
               style={{ display: "flex" }}
             >
-              {/* <Form.Control type="email" placeholder={props.description} /> */}
               <Container
                 className="py-3 px-3"
                 style={{ border: "1px black solid", borderRadius: "5px" }}
@@ -90,11 +75,11 @@ const FormToFill = () => {
                 <Row className="mt-2">
                   <Col>
                     <p>School</p>
-                    <Form.Control rows={3} type="email" />
+                    <Form.Control rows={3} type="text" />
                   </Col>
                   <Col>
                     <p>City</p>
-                    <Form.Control rows={3} type="email" />
+                    <Form.Control rows={3} type="text" />
                   </Col>
                 </Row>
                 <Row>
@@ -157,7 +142,7 @@ const FormToFill = () => {
                 </span>
               </Button>
 
-              <Button style={{ float: "right" }} >
+              <Button style={{ float: "right" }}>
                 <span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -873,7 +858,7 @@ const FormToFill = () => {
     );
   };
   const EducationAccordionElement = (props) => {
-    
+  const [educationArray,setEducationArray] = useState([]);
     return (
       <Accordion
         defaultActiveKey="0"
@@ -890,7 +875,6 @@ const FormToFill = () => {
               controlId="formBasicEmail"
               style={{ display: "flex" }}
             >
-              {/* <Form.Control type="email" placeholder={props.description} /> */}
               <Container
                 className="py-3 px-3"
                 style={{ border: "1px black solid", borderRadius: "5px" }}
@@ -898,17 +882,21 @@ const FormToFill = () => {
                 <Row>
                   <Col className="mb-2">
                     <p className="">Education</p>
-                    <Form.Control rows={3} type="email" />
+                    <Form.Control
+                      className="education"
+                      rows={3}
+                      type="text"
+                    />
                   </Col>
                 </Row>
                 <Row className="mt-2">
                   <Col>
                     <p>School</p>
-                    <Form.Control rows={3} type="email" />
+                    <Form.Control rows={3} type="text" className="education" />
                   </Col>
                   <Col>
                     <p>City</p>
-                    <Form.Control rows={3} type="email" />
+                    <Form.Control rows={3} type="text" className="education"/>
                   </Col>
                 </Row>
                 <Row>
@@ -925,7 +913,7 @@ const FormToFill = () => {
                     <p className="mt-3">End date</p>
                     <Form.Control
                       aria-label="description"
-                      className=""
+                      className="education"
                       type="month"
                       style={{ marginTop: "-10px" }}
                     ></Form.Control>
@@ -936,7 +924,7 @@ const FormToFill = () => {
                     <p className="mt-3">Description</p>
                     <Form.Control
                       aria-label="description"
-                      className=""
+                      className="education"
                       as="textarea"
                       rows={5}
                       maxLength="1500"
@@ -971,7 +959,14 @@ const FormToFill = () => {
                 </span>
               </Button>
 
-              <Button style={{ float: "right" }}>
+              <Button
+                id="finishEducationArray"
+                style={{ float: "right" }}
+                onClick={() => {
+                  let arr = getEducationArray();
+                  console.log(arr[0].value);
+                }}
+              >
                 <span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1034,7 +1029,6 @@ const FormToFill = () => {
               controlId="formBasicEmail"
               style={{ display: "flex" }}
             >
-              {/* <Form.Control type="email" placeholder={props.description} /> */}
               <Container
                 className="py-3 px-3"
                 style={{ border: "1px black solid", borderRadius: "5px" }}
@@ -1231,20 +1225,6 @@ const FormToFill = () => {
   const [address, setAddress] = useState("");
   const [city, setCity] = useState("");
   const [postCode, setPostCode] = useState("");
-  /*Education array*/
-  // const [educationArray, setEducationArray] = useState([]);
-  // const HandleAddEducation = () => {
-  //   setEducationArray((newEducation) => [...educationArray, newEducation]);
-  // };
-
-  // const [educations, setEducations] = useState(null);
-  // const [educationTitle, setEducationTitle] = useState("");
-  // const [school, setSchool] = useState("");
-  // const [educationCity, setEducationCity] = useState("");
-  // const [startDate, setStartDate] = useState("");
-  // const [endDate, setEndDate] = useState("");
-  // const [educationDescription, setEducationDescription] = useState("");
-
   return (
     <div
       style={{
@@ -1454,7 +1434,7 @@ const FormToFill = () => {
         </Row>
         <Fade left>
           <div>
-            <EducationAccordionElement Headline="Education " />
+            <EducationAccordionElement Headline="Education" />
             <EmploymentAccordionElement Headline="Employment" />
             <div>
               <Row>

@@ -8,7 +8,7 @@ function addEducationContent() {
                   <div class="row">
                           <div class="col mb-2">
                               <p>Education</p>
-                              <input class="form-control" row="3" type="text" placeholder="" style="" />
+                              <input class="form-control educationTitle" row="3" type="text" placeholder="" style="" />
                           </div>
                   </div>
                   <div class="row mt-2">
@@ -332,5 +332,3 @@ export function addHobbyElement() {
     .getElementById("addHobby")
     .removeEventListener("click", addHobbiesContent());
 }
-
-

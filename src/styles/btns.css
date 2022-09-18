@@ -11,7 +11,6 @@
 #previewBtn:hover {
   transform: scale(1.02);
   color: #000;
-
   background-color: #e8ffff;
 }
 #downloadBtn:hover {
@@ -33,3 +32,14 @@
   color:#000;
 }
 
+
+/* #exploreBtn {
+  transition-duration: 5s;
+} */
+#exploreBtn :hover{
+  line-height: 1.5;
+  text-decoration: underline;
+}
+#discoverBtn :hover{
+  text-decoration: underline;
+}

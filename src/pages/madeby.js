@@ -28,7 +28,7 @@ const MadeBy = () => {
             color: "rgb(3, 4, 94)",
           }}
         >
-          The Team behind Assistancya :
+          The Team behind Assistancya:
         </p>
         <Container
           style={{
